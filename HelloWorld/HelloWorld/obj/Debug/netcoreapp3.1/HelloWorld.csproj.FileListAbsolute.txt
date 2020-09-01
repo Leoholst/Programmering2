@@ -10,3 +10,4 @@ C:\Users\Leo.Holst\Documents\GitHub\Programmering2\HelloWorld\HelloWorld\obj\Deb
 C:\Users\Leo.Holst\Documents\GitHub\Programmering2\HelloWorld\HelloWorld\obj\Debug\netcoreapp3.1\HelloWorld.dll
 C:\Users\Leo.Holst\Documents\GitHub\Programmering2\HelloWorld\HelloWorld\obj\Debug\netcoreapp3.1\HelloWorld.pdb
 C:\Users\Leo.Holst\Documents\GitHub\Programmering2\HelloWorld\HelloWorld\obj\Debug\netcoreapp3.1\HelloWorld.genruntimeconfig.cache
+C:\Users\Leo.Holst\Documents\GitHub\Programmering2\HelloWorld\HelloWorld\obj\Debug\netcoreapp3.1\HelloWorld.csprojAssemblyReference.cache
