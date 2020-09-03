@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace HelloWorld
 {
@@ -6,6 +7,7 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
+            /*
             Console.WriteLine("Hello Niklas!");
             var age = 0;
             Console.WriteLine("How old are you?");
@@ -16,12 +18,12 @@ namespace HelloWorld
                 Console.WriteLine("You're not special.");
             }
 
-            var name = "";
+            var yourName = "";
             Console.WriteLine("What is your name?");
             input = Console.ReadLine();
-            name = input;
-            Console.WriteLine("Ah so your name is " + name);
-            switch (name)
+            yourName = input;
+            Console.WriteLine("Ah so your name is " + yourName);
+            switch (yourName)
             {
                 case "Leo":
                     Console.WriteLine("You have a beautiful name!");
@@ -61,7 +63,36 @@ namespace HelloWorld
             {
                 Console.WriteLine(DeadOrNot + " You seem alive...");
             }
+            */
 
+            string[] names = new string[5];
+            Console.WriteLine("Put five celebrities in order of how much you like them!");
+            for (int i = 0; i < names.Length; i++)
+            {
+                names[i] = Console.ReadLine();
+            }
+            Console.WriteLine("You think that:");
+            foreach (var name in names)
+            {
+                Console.WriteLine(name);
+            }
+            Console.WriteLine("However, I think that:");
+            for (int j = names.Length - 1; j >= 0; j--)
+            {
+                Console.WriteLine(names[j]);
+            }
+
+            string[,,] bigArrays = new string[1, 1, 1];
+            Console.WriteLine("Put your name, your age and if you're alive.");
+            for (int i = 0; i < bigArrays.Length; i++)
+            {
+                bigArrays[i, i, i] = Console.ReadLine();
+            }
+            
+            foreach (var bigArray in bigArrays)
+            {
+                Console.WriteLine(bigArray);
+            }
         }
     }
 }
