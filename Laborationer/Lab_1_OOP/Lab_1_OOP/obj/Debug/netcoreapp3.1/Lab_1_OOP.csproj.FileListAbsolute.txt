@@ -1,0 +1,13 @@
+C:\Users\Leo.Holst\Documents\GitHub\Programmering2\Laborationer\Lab_1_OOP\Lab_1_OOP\bin\Debug\netcoreapp3.1\Lab_1_OOP.exe
+C:\Users\Leo.Holst\Documents\GitHub\Programmering2\Laborationer\Lab_1_OOP\Lab_1_OOP\bin\Debug\netcoreapp3.1\Lab_1_OOP.deps.json
+C:\Users\Leo.Holst\Documents\GitHub\Programmering2\Laborationer\Lab_1_OOP\Lab_1_OOP\bin\Debug\netcoreapp3.1\Lab_1_OOP.runtimeconfig.json
+C:\Users\Leo.Holst\Documents\GitHub\Programmering2\Laborationer\Lab_1_OOP\Lab_1_OOP\bin\Debug\netcoreapp3.1\Lab_1_OOP.runtimeconfig.dev.json
+C:\Users\Leo.Holst\Documents\GitHub\Programmering2\Laborationer\Lab_1_OOP\Lab_1_OOP\bin\Debug\netcoreapp3.1\Lab_1_OOP.dll
+C:\Users\Leo.Holst\Documents\GitHub\Programmering2\Laborationer\Lab_1_OOP\Lab_1_OOP\bin\Debug\netcoreapp3.1\Lab_1_OOP.pdb
+C:\Users\Leo.Holst\Documents\GitHub\Programmering2\Laborationer\Lab_1_OOP\Lab_1_OOP\obj\Debug\netcoreapp3.1\Lab_1_OOP.csprojAssemblyReference.cache
+C:\Users\Leo.Holst\Documents\GitHub\Programmering2\Laborationer\Lab_1_OOP\Lab_1_OOP\obj\Debug\netcoreapp3.1\Lab_1_OOP.AssemblyInfoInputs.cache
+C:\Users\Leo.Holst\Documents\GitHub\Programmering2\Laborationer\Lab_1_OOP\Lab_1_OOP\obj\Debug\netcoreapp3.1\Lab_1_OOP.AssemblyInfo.cs
+C:\Users\Leo.Holst\Documents\GitHub\Programmering2\Laborationer\Lab_1_OOP\Lab_1_OOP\obj\Debug\netcoreapp3.1\Lab_1_OOP.csproj.CoreCompileInputs.cache
+C:\Users\Leo.Holst\Documents\GitHub\Programmering2\Laborationer\Lab_1_OOP\Lab_1_OOP\obj\Debug\netcoreapp3.1\Lab_1_OOP.dll
+C:\Users\Leo.Holst\Documents\GitHub\Programmering2\Laborationer\Lab_1_OOP\Lab_1_OOP\obj\Debug\netcoreapp3.1\Lab_1_OOP.pdb
+C:\Users\Leo.Holst\Documents\GitHub\Programmering2\Laborationer\Lab_1_OOP\Lab_1_OOP\obj\Debug\netcoreapp3.1\Lab_1_OOP.genruntimeconfig.cache
