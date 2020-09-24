@@ -8,6 +8,7 @@ namespace Lab_1_OOP
         {
             GreetCustomer();
             ChooseProduct();
+            confirmOrder();
         }
 
         static void GreetCustomer()
@@ -32,6 +33,21 @@ namespace Lab_1_OOP
             var inputYear = Console.ReadLine();
             chooseYourCar.car_Year = int.Parse(inputYear);
             Console.WriteLine("So, you want a " + chooseYourCar.car_Year + " " + chooseYourCar.car_Color + " " + chooseYourCar.car_Model + "?");
+        }
+
+        static void confirmOrder()
+        {
+            Console.WriteLine("\nPress 1 to confirm this order.\n" + "Press 2 to cancel the order");
+            var input = Console.ReadLine();
+            int CorD = int.Parse(input);
+            if (CorD == 1)
+            {
+                Console.WriteLine("Thank you for your cooperation! Pleasant doing business with you.");
+            }
+            else
+            {
+                Console.WriteLine("Come back another time!");
+            }
         }
     }
 }
