@@ -9,6 +9,7 @@ namespace Lab_1_OOP
             GreetCustomer();
             ChooseProduct();
             confirmOrder();
+            freeProduct();
         }
 
         static void GreetCustomer()
@@ -47,6 +48,23 @@ namespace Lab_1_OOP
             else
             {
                 Console.WriteLine("Come back another time!");
+            }
+        }
+
+        static void freeProduct()
+        {
+            Car prize_Car = new Car();
+            Console.WriteLine("\nCongratulations! Since you were our first customer YOU win two free cars of your choice!");
+            Console.WriteLine("\nPress 1 to choose number 1\n" + "Press 2 to choose number 2");
+            var input = Console.ReadLine();
+            int OneOrTwo = int.Parse(input);
+            if (OneOrTwo == 1)
+            {
+                Console.WriteLine("Have fun with your new daily drive! You got a " + prize_Car.prize_Car_YearOne + " " + prize_Car.prize_Car_ColorOne + " " + prize_Car.prize_Car_ModelOne);
+            }
+            else
+            {
+                Console.WriteLine("Have fun with your new drive! You got a " + prize_Car.prize_Car_YearTwo + " " + prize_Car.prize_Car_ColorTwo + " " + prize_Car.prize_Car_ModelTwo);
             }
         }
     }
