@@ -1,0 +1,13 @@
+C:\Users\Leo.Holst\source\repos\Labb\Labb_Abstract\Labb_Abstract\bin\Debug\netcoreapp3.1\Labb_Abstract.exe
+C:\Users\Leo.Holst\source\repos\Labb\Labb_Abstract\Labb_Abstract\bin\Debug\netcoreapp3.1\Labb_Abstract.deps.json
+C:\Users\Leo.Holst\source\repos\Labb\Labb_Abstract\Labb_Abstract\bin\Debug\netcoreapp3.1\Labb_Abstract.runtimeconfig.json
+C:\Users\Leo.Holst\source\repos\Labb\Labb_Abstract\Labb_Abstract\bin\Debug\netcoreapp3.1\Labb_Abstract.runtimeconfig.dev.json
+C:\Users\Leo.Holst\source\repos\Labb\Labb_Abstract\Labb_Abstract\bin\Debug\netcoreapp3.1\Labb_Abstract.dll
+C:\Users\Leo.Holst\source\repos\Labb\Labb_Abstract\Labb_Abstract\bin\Debug\netcoreapp3.1\Labb_Abstract.pdb
+C:\Users\Leo.Holst\source\repos\Labb\Labb_Abstract\Labb_Abstract\obj\Debug\netcoreapp3.1\Labb_Abstract.csprojAssemblyReference.cache
+C:\Users\Leo.Holst\source\repos\Labb\Labb_Abstract\Labb_Abstract\obj\Debug\netcoreapp3.1\Labb_Abstract.AssemblyInfoInputs.cache
+C:\Users\Leo.Holst\source\repos\Labb\Labb_Abstract\Labb_Abstract\obj\Debug\netcoreapp3.1\Labb_Abstract.AssemblyInfo.cs
+C:\Users\Leo.Holst\source\repos\Labb\Labb_Abstract\Labb_Abstract\obj\Debug\netcoreapp3.1\Labb_Abstract.csproj.CoreCompileInputs.cache
+C:\Users\Leo.Holst\source\repos\Labb\Labb_Abstract\Labb_Abstract\obj\Debug\netcoreapp3.1\Labb_Abstract.dll
+C:\Users\Leo.Holst\source\repos\Labb\Labb_Abstract\Labb_Abstract\obj\Debug\netcoreapp3.1\Labb_Abstract.pdb
+C:\Users\Leo.Holst\source\repos\Labb\Labb_Abstract\Labb_Abstract\obj\Debug\netcoreapp3.1\Labb_Abstract.genruntimeconfig.cache
