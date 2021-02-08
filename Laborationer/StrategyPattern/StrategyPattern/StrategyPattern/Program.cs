@@ -11,12 +11,12 @@ namespace StrategyPattern
             Console.WriteLine("Press 2 for the Volvo 760");
             Console.WriteLine("Press 3 for the Volvo S70");
 
-            static string ChooseModel()
+            static string ChooseModel(string ModelChoice)
             {
-              return Console.ReadLine();
+                Console.WriteLine(": ");
+                ModelChoice = Console.ReadLine();
+                return ModelChoice;
             }
-
-            
         }
     }
 }
