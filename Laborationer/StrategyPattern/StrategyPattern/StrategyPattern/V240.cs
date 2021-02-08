@@ -4,7 +4,11 @@ using System.Text;
 
 namespace StrategyPattern
 {
-    class V240
+    class V240 : ModelType
     {
+        public void Model()
+        {
+            Console.WriteLine("You have chosen the brand new Volvo 240! Grreat choice!");
+        }
     }
 }

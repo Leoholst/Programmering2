@@ -4,7 +4,11 @@ using System.Text;
 
 namespace StrategyPattern
 {
-    class ModelType
+    abstract class ModelType
     {
+        interface ModelTypeInterface
+        {
+            public void Model();
+        }
     }
 }
