@@ -17,10 +17,10 @@
             Hi and welcome to this quiz game.
         </TextBlock>
 
-        <Button Background="DarkSalmon" FontSize="18" Click="checkAnswer" Name="ans1" Width="200" Height="50" Content="Answer 1" Tag="0" Canvas.Left="104" Canvas.Top="434"/>
-        <Button Background="DarkSalmon" FontSize="18" Click="checkAnswer" Name="ans2" Width="200" Height="50" Content="Answer 2" Tag="0" Canvas.Left="476" Canvas.Top="434"/>
-        <Button Background="DarkSalmon" FontSize="18" Click="checkAnswer" Name="ans3" Width="200" Height="50" Content="Answer 3" Tag="0" Canvas.Left="104" Canvas.Top="509"/>
-        <Button Background="DarkSalmon" FontSize="18" Click="checkAnswer" Name="ans4" Width="200" Height="50" Content="Answer 4" Tag="0" Canvas.Left="476" Canvas.Top="509"/>
+        <Button Background="DarkGoldenrod" FontSize="18" Click="checkAnswer" Name="ans1" Width="200" Height="50" Content="Answer 1" Tag="0" Canvas.Left="104" Canvas.Top="434"/>
+        <Button Background="DarkGoldenrod" FontSize="18" Click="checkAnswer" Name="ans2" Width="200" Height="50" Content="Answer 2" Tag="0" Canvas.Left="476" Canvas.Top="434"/>
+        <Button Background="DarkGoldenrod" FontSize="18" Click="checkAnswer" Name="ans3" Width="200" Height="50" Content="Answer 3" Tag="0" Canvas.Left="104" Canvas.Top="509"/>
+        <Button Background="DarkGoldenrod" FontSize="18" Click="checkAnswer" Name="ans4" Width="200" Height="50" Content="Answer 4" Tag="0" Canvas.Left="476" Canvas.Top="509"/>
         
 
     </Canvas>
