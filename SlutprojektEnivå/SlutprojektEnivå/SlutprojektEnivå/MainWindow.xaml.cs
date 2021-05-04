@@ -20,13 +20,13 @@ namespace SlutprojektEnivå
     /// </summary>
     public partial class MainWindow : Window
     {
-        /*
-         * Först skapas fyra universala variabler, tre ints och en List. 
-         * List questionNumbers är av typen int och går från 1 till 10, där varje nummer motsvarar en fråga.
-         * int qNum är den aktuella frågan.
-         * int i är en standard-variabel som är universal därför att den används i flera klasser.
-         * int score är till för att hålla koll på spelarens poäng dvs. hur många rätt spelaren har fått.
-        */
+        /// <summary>
+        /// Först skapas fyra universala variabler, tre ints och en List. 
+        /// List questionNumbers är av typen int och går från 1 till 10, där varje nummer motsvarar en fråga.
+        /// int qNum är den aktuella frågan.
+        /// int i är en standard-variabel som är universal därför att den används i flera klasser.
+        /// int score är till för att hålla koll på spelarens poäng dvs. hur många rätt spelaren har fått.
+        /// </summary>
         List<int> questionNumbers = new List<int> {1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
         int qNum = 0;
@@ -35,27 +35,27 @@ namespace SlutprojektEnivå
 
         int score;
 
-        /* 
-         * Detta är Main-klassen för frågespelet som sköter ordningen för hur spelet ska köras.
-         * Först anropas standard InitializeComponent().
-         * Sedan anropas StartGame().
-         * Slutligen anropas NextQuestion().
-        */
+        /// <summary>
+        /// Detta är Main-metoden för frågespelet som sköter ordningen för hur spelet ska köras.
+        /// Först anropas standard InitializeComponent().
+        /// Sedan anropas StartGame().
+        /// Slutligen anropas NextQuestion().
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
             StartGame();
             NextQuestion();
         }
-        
-        /*
-         * Denna klass heter checkAnswer och är en produkt av knapparna i .xaml filen.
-         * Klassen består av en knapp variabel, två if-statements och en scoreText.
-         * Första if-statementet kollar om knappen som trycks på har rätt värde och om så är fallet, lägger på ett poäng på score alltså poängen.
-         * Det andra if-statementet kollar vilken fråga som spelaren är på. Om det är innan första frågan kommer det bli första frågan, annars kommer det bli nästa fråga i ordningen.
-         * Sedan skriver den ut hur många poäng spelaren ligger på efter att ha svarat på frågan.
-         * Slutligen anropas NextQuestion().
-        */
+
+        /// <summary>
+        /// Denna metod heter checkAnswer och är en produkt av knapparna i .xaml filen.
+        /// Metoden består av en knapp variabel, två if-statements och en scoreText.
+        /// Första if-statementet kollar om knappen som trycks på har rätt värde och om så är fallet, lägger på ett poäng på score alltså poängen.
+        /// Det andra if-statementet kollar vilken fråga som spelaren är på. Om det är innan första frågan kommer det bli första frågan, annars kommer det bli nästa fråga i ordningen.
+        /// Sedan skriver den ut hur många poäng spelaren ligger på efter att ha svarat på frågan.
+        /// Slutligen anropas NextQuestion().
+        /// </summary>
         private void checkAnswer(object sender, RoutedEventArgs e)
         {
             Button senderButton = sender as Button;
@@ -79,12 +79,12 @@ namespace SlutprojektEnivå
             NextQuestion();
         }
 
-        /* 
-         * Denna klass heter RestartGame och har i uppgift att starta om spelet vid anropning.
-         * Klassen sätter score dvs. spelarens poäng till 0.
-         * qNum sätter den under 0 vilket betyder att den i CheckAnswer() kan sättas till 0 och på så sätt starta spelet.
-         * Slutligen sätts i till 0 och StartGame() anropas.
-        */
+        /// <summary>
+        /// Denna metod heter RestartGame och har i uppgift att starta om spelet vid anropning.
+        /// Metoden sätter score dvs. spelarens poäng till 0.
+        /// qNum sätter den under 0 vilket betyder att den i CheckAnswer() kan sättas till 0 och på så sätt starta spelet.
+        /// Slutligen sätts i till 0 och StartGame() anropas.
+        /// </summary>
         private void RestartGame()
         {
             score = 0;
@@ -93,16 +93,16 @@ namespace SlutprojektEnivå
             StartGame();
         }
 
-        /*
-         * Denna klass heter NextQuestion och är den största klassen i programmet. Klassen bryter mot S i SOLID därför att den inte bara har ett ansvarsområde.
-         * Klassen består av ett if-statement, en foreach-loop och ett switch-statement.
-         * Först kommer if-statementet och kollar om qNum är mindre än det aktuella nummret i List questionNumbers, och isåfall sätter i till det specifika index nummret. Om inte så startar spelet om.
-         * Med andra ord, if-statementet kollar om frågan spelaren är på är mindre än antalet frågor tillgängliga i spelet så sätts i till just det nummret. Detta är för att frågorna i spelet är slumpmässiga.
-         * Sedan kommer foreach-loopen som säger att för varje knapp i vår Canvas, kommer deras värde sättas till 0. Detta för att kunna räkna poäng på rätt sätt.
-         * Sist men inte minst kommer swtich-statementet. Denna består av 10 cases, en för varje fråga som skriver ut frågan med en bild samt de fyra alternativen, där ett är rätt. 
-         * Den sätter sedan värdet på den rätta frågan till 1. Detta betyder att resterande frågor kommer ha värde 0 och om man klickar på den rätta frågan, så kommer score gå upp.
-         * Det enda som jag inte har kopierat exakt av guiden är bild-länken. Detta för att hans sätt inte fungerade för mig, men problemet var nog ändå att Build Action inte var satt till Resource.
-        */
+        /// <summary>
+        /// Denna metod heter NextQuestion och är den största metoden i programmet. Metoden bryter mot S i SOLID därför att den inte bara har ett ansvarsområde.
+        /// Metoden består av ett if-statement, en foreach-loop och ett switch-statement.
+        /// Först kommer if-statementet och kollar om qNum är mindre än det aktuella nummret i List questionNumbers, och isåfall sätter i till det specifika index nummret. Om inte så startar spelet om.
+        /// Med andra ord, if-statementet kollar om frågan spelaren är på är mindre än antalet frågor tillgängliga i spelet så sätts i till just det nummret. Detta är för att frågorna i spelet är slumpmässiga.
+        /// Sedan kommer foreach-loopen som säger att för varje knapp i vår Canvas, kommer deras värde sättas till 0. Detta för att kunna räkna poäng på rätt sätt.
+        /// Sist men inte minst kommer swtich-statementet. Denna består av 10 cases, en för varje fråga som skriver ut frågan med en bild samt de fyra alternativen, där ett är rätt.
+        /// Den sätter sedan värdet på den rätta frågan till 1. Detta betyder att resterande frågor kommer ha värde 0 och om man klickar på den rätta frågan, så kommer score gå upp.
+        /// Det enda som jag inte har kopierat exakt av guiden är bild-länken. Detta för att hans sätt inte fungerade för mig, men problemet var nog ändå att Build Action inte var satt till Resource.
+        /// </summary>
         private void NextQuestion()
         {
             if (qNum < questionNumbers.Count)
@@ -264,14 +264,14 @@ namespace SlutprojektEnivå
             }
         }
 
-        /*
-         * Denna klass heter StartGame, det är här frågorna slumpas innan spelaren får börja spela.
-         * Först skapas en variabel randomList som skapar en ny ordning av List questionNumbers med hjälp av Guid.
-         * Sedan sätts att questionNumbers är lika med randomList.
-         * Efter det skapas questionOrder, vilket är den synliga slumpmässiga ordningen av frågorna. 
-         * Sist kommer en for-loop som kommer loopa så länge i är mindre än antalet tillgängliga frågor.
-         * Och det loopen gör, är att den adderar siffrorna från den slumpade listan till questionOrder.
-        */
+        /// <summary>
+        /// Denna metod heter StartGame, det är här frågorna slumpas innan spelaren får börja spela.
+        /// Först skapas en variabel randomList som skapar en ny ordning av List questionNumbers med hjälp av Guid.
+        /// Sedan sätts att questionNumbers är lika med randomList.
+        /// Efter det skapas questionOrder, vilket är den synliga slumpmässiga ordningen av frågorna.
+        /// Sist kommer en for-loop som kommer loopa så länge i är mindre än antalet tillgängliga frågor.
+        /// Och det loopen gör, är att den adderar siffrorna från den slumpade listan till questionOrder.
+        /// </summary>
         private void StartGame()
         {
             var randomList = questionNumbers.OrderBy(a => Guid.NewGuid()).ToList();
