@@ -27,214 +27,25 @@ namespace SlutprojektUtökning
         {
             InitializeComponent();
             controller = Controller.InitMainController();
-            StartGame();
+            controller.StartGame();
             NextQuestion();
         }
 
-        private void checkAnswer(object sender, RoutedEventArgs e)
+        private void checkAnswer2(object sender, RoutedEventArgs e)
         {
-            Button senderButton = sender as Button;
-
-            if (senderButton.Tag.ToString() == "1")
-            {
-                model.score++;
-            }
-
-            if (model.qNum < 0)
-            {
-                model.qNum = 0;
-            }
-            else
-            {
-                model.qNum++;
-            }
-
             scoreText.Content = "Answered Correctly " + model.score + "/" + model.questionNumbers.Count;
-
-            NextQuestion();
         }
 
-        private void RestartGame()
+        private void UpdateButton()
         {
-            model.score = 0;
-            model.qNum = -1;
-            model.i = 0;
-            StartGame();
-        }
-
-        private void NextQuestion()
-        {
-            if (model.qNum < model.questionNumbers.Count)
-            {
-                model.i = model.questionNumbers[model.qNum];
-            }
-            else
-            {
-                RestartGame();
-            }
-
             foreach (var x in myCanvas.Children.OfType<Button>())
             {
                 x.Tag = "0";
                 x.Background = Brushes.DarkGoldenrod;
             }
-
-            switch (model.i)
-            {
-                case 1:
-                    txtQuestion.Text = "Question 1";
-
-                    ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2 Correct";
-                    ans3.Content = "Answer 3";
-                    ans4.Content = "Answer 4";
-
-                    ans2.Tag = "1";
-
-                    qImage.Source = new BitmapImage(new Uri("./images/1.jpg", UriKind.Relative));
-
-                    break;
-
-                case 2:
-                    txtQuestion.Text = "Question 2";
-
-                    ans1.Content = "Answer 1 Correct";
-                    ans2.Content = "Answer 2";
-                    ans3.Content = "Answer 3";
-                    ans4.Content = "Answer 4";
-
-                    ans1.Tag = "1";
-
-                    qImage.Source = new BitmapImage(new Uri("./images/2.jpg", UriKind.Relative));
-
-                    break;
-
-                case 3:
-                    txtQuestion.Text = "Question 3";
-
-                    ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2";
-                    ans3.Content = "Answer 3 Correct";
-                    ans4.Content = "Answer 4";
-
-                    ans3.Tag = "1";
-
-                    qImage.Source = new BitmapImage(new Uri("./images/3.jpg", UriKind.Relative));
-
-                    break;
-
-                case 4:
-                    txtQuestion.Text = "Question 4";
-
-                    ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2";
-                    ans3.Content = "Answer 3";
-                    ans4.Content = "Answer 4 Correct";
-
-                    ans4.Tag = "1";
-
-                    qImage.Source = new BitmapImage(new Uri("./images/4.jpg", UriKind.Relative));
-
-                    break;
-
-                case 5:
-                    txtQuestion.Text = "Question 5";
-
-                    ans1.Content = "Answer 1 Correct";
-                    ans2.Content = "Answer 2";
-                    ans3.Content = "Answer 3";
-                    ans4.Content = "Answer 4";
-
-                    ans1.Tag = "1";
-
-                    qImage.Source = new BitmapImage(new Uri("./images/5.jpg", UriKind.Relative));
-
-                    break;
-
-                case 6:
-                    txtQuestion.Text = "Question 6";
-
-                    ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2 Correct";
-                    ans3.Content = "Answer 3";
-                    ans4.Content = "Answer 4";
-
-                    ans2.Tag = "1";
-
-                    qImage.Source = new BitmapImage(new Uri("./images/6.jpg", UriKind.Relative));
-
-                    break;
-
-                case 7:
-                    txtQuestion.Text = "Question 7";
-
-                    ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2";
-                    ans3.Content = "Answer 3 Correct";
-                    ans4.Content = "Answer 4";
-
-                    ans3.Tag = "1";
-
-                    qImage.Source = new BitmapImage(new Uri("./images/7.jpg", UriKind.Relative));
-
-                    break;
-
-                case 8:
-                    txtQuestion.Text = "Question 8";
-
-                    ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2";
-                    ans3.Content = "Answer 3";
-                    ans4.Content = "Answer 4 Correct";
-
-                    ans4.Tag = "1";
-
-                    qImage.Source = new BitmapImage(new Uri("./images/8.jpg", UriKind.Relative));
-
-                    break;
-
-                case 9:
-                    txtQuestion.Text = "Question 9";
-
-                    ans1.Content = "Answer 1 Correct";
-                    ans2.Content = "Answer 2";
-                    ans3.Content = "Answer 3";
-                    ans4.Content = "Answer 4";
-
-                    ans1.Tag = "1";
-
-                    qImage.Source = new BitmapImage(new Uri("./images/9.jpg", UriKind.Relative));
-
-                    break;
-
-                case 10:
-                    txtQuestion.Text = "Question 10";
-
-                    ans1.Content = "Answer 1";
-                    ans2.Content = "Answer 2";
-                    ans3.Content = "Answer 3";
-                    ans4.Content = "Answer 4 Correct";
-
-                    ans4.Tag = "1";
-
-                    qImage.Source = new BitmapImage(new Uri("./images/10.jpg", UriKind.Relative));
-
-                    break;
-            }
         }
 
-        private void StartGame()
-        {
-            var randomList = model.questionNumbers.OrderBy(a => Guid.NewGuid()).ToList();
+        /// Metod med värdena, anropa denna metod i controller.
 
-            model.questionNumbers = randomList;
-
-            questionOrder.Content = null;
-
-            for (int i = 0; i < model.questionNumbers.Count; i++)
-            {
-                questionOrder.Content += " " + model.questionNumbers[i].ToString();
-            }
-        }
     }
 }
