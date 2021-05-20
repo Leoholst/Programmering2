@@ -20,17 +20,13 @@ namespace SlutprojektUtökning
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<int> questionNumbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-
-        int qNum = 0;
-
-        int i;
-
-        int score;
+        Model model = new Model();
+        private Controller controller;
 
         public MainWindow()
         {
             InitializeComponent();
+            controller = Controller.InitMainController();
             StartGame();
             NextQuestion();
         }
@@ -41,36 +37,36 @@ namespace SlutprojektUtökning
 
             if (senderButton.Tag.ToString() == "1")
             {
-                score++;
+                model.score++;
             }
 
-            if (qNum < 0)
+            if (model.qNum < 0)
             {
-                qNum = 0;
+                model.qNum = 0;
             }
             else
             {
-                qNum++;
+                model.qNum++;
             }
 
-            scoreText.Content = "Answered Correctly " + score + "/" + questionNumbers.Count;
+            scoreText.Content = "Answered Correctly " + model.score + "/" + model.questionNumbers.Count;
 
             NextQuestion();
         }
 
         private void RestartGame()
         {
-            score = 0;
-            qNum = -1;
-            i = 0;
+            model.score = 0;
+            model.qNum = -1;
+            model.i = 0;
             StartGame();
         }
 
         private void NextQuestion()
         {
-            if (qNum < questionNumbers.Count)
+            if (model.qNum < model.questionNumbers.Count)
             {
-                i = questionNumbers[qNum];
+                model.i = model.questionNumbers[model.qNum];
             }
             else
             {
@@ -83,7 +79,7 @@ namespace SlutprojektUtökning
                 x.Background = Brushes.DarkGoldenrod;
             }
 
-            switch (i)
+            switch (model.i)
             {
                 case 1:
                     txtQuestion.Text = "Question 1";
@@ -229,15 +225,15 @@ namespace SlutprojektUtökning
 
         private void StartGame()
         {
-            var randomList = questionNumbers.OrderBy(a => Guid.NewGuid()).ToList();
+            var randomList = model.questionNumbers.OrderBy(a => Guid.NewGuid()).ToList();
 
-            questionNumbers = randomList;
+            model.questionNumbers = randomList;
 
             questionOrder.Content = null;
 
-            for (int i = 0; i < questionNumbers.Count; i++)
+            for (int i = 0; i < model.questionNumbers.Count; i++)
             {
-                questionOrder.Content += " " + questionNumbers[i].ToString();
+                questionOrder.Content += " " + model.questionNumbers[i].ToString();
             }
         }
     }
