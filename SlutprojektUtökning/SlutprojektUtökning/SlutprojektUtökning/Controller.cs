@@ -11,7 +11,6 @@ namespace SlutprojektUtökning
     public class Controller
     {
         Model model = new Model();
-        public MainWindow view = new MainWindow();
 
         public Controller InitMainController()
         {
@@ -76,12 +75,12 @@ namespace SlutprojektUtökning
                 RestartGame();
             }
 
-            view.UpdateButton();
+            MainWindow.UpdateButton();
 
             switch (model.constant)
             {
                 case 1:
-                    view.txtQuestion.Text = "Question 1";
+                    txtQuestion.Text = "Question 1";
 
                     view.ans1.Content = "Answer 1";
                     view.ans2.Content = "Answer 2 Correct";

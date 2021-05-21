@@ -32,7 +32,7 @@ namespace SlutprojektUtökning
             
             controller.StartGame();
             controller.NextQuestion();
-            
+            Close();
         }
 
         public void ScoreTextOutput()
@@ -65,5 +65,16 @@ namespace SlutprojektUtökning
 
             controller.CheckAnswerController(senderButton);
         }
+
+        public void SetQuestionData(Question question)
+        {
+            Question questiona = new Question();
+            ans1.Content = questiona.Content;
+        }
+    }
+
+    public class Question
+    {
+        public string Content { get; set; }
     }
 }
