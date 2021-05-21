@@ -10,7 +10,7 @@ namespace SlutprojektUtökning
 
         public int qNum = 0;
 
-        public int i;
+        public int constant;
 
         public int score;
 

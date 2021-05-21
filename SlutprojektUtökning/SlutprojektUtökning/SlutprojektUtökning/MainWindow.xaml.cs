@@ -22,21 +22,24 @@ namespace SlutprojektUtökning
     {
         Model model = new Model();
         private Controller controller;
+        
 
         public MainWindow()
         {
             InitializeComponent();
-            controller = Controller.InitMainController();
+            
+            // controller = Controller.InitMainController();
+            
             controller.StartGame();
-            NextQuestion();
+            controller.NextQuestion();
         }
 
-        private void checkAnswer2(object sender, RoutedEventArgs e)
+        public void ScoreTextOutput()
         {
             scoreText.Content = "Answered Correctly " + model.score + "/" + model.questionNumbers.Count;
         }
 
-        private void UpdateButton()
+        public void UpdateButton()
         {
             foreach (var x in myCanvas.Children.OfType<Button>())
             {
@@ -45,7 +48,21 @@ namespace SlutprojektUtökning
             }
         }
 
-        /// Metod med värdena, anropa denna metod i controller.
+        public void ResetQOrder()
+        {
+            questionOrder.Content = null;
+        }
 
+        public void QOrderView()
+        {
+            questionOrder.Content += " " + model.questionNumbers[model.constant].ToString();
+        }
+
+        private void checkAnswer(object sender, RoutedEventArgs e)
+        {
+            Button senderButton = sender as Button;
+
+            controller.CheckAnswerController(senderButton);
+        }
     }
 }
