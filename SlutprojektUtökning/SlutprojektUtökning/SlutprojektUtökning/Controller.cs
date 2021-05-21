@@ -11,7 +11,7 @@ namespace SlutprojektUtökning
     public class Controller
     {
         Model model = new Model();
-        private MainWindow view;
+        public MainWindow view = new MainWindow();
 
         public Controller InitMainController()
         {

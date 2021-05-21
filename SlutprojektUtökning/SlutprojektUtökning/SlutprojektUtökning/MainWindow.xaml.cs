@@ -21,7 +21,7 @@ namespace SlutprojektUtökning
     public partial class MainWindow : Window
     {
         Model model = new Model();
-        private Controller controller;
+        public Controller controller = new Controller();
         
 
         public MainWindow()
