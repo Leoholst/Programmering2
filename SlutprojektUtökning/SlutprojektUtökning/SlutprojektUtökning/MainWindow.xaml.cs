@@ -32,6 +32,7 @@ namespace SlutprojektUtökning
             
             controller.StartGame();
             controller.NextQuestion();
+            Close();
         }
 
         public void ScoreTextOutput()
