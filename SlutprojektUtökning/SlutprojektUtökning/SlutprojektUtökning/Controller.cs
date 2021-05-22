@@ -21,7 +21,6 @@ namespace SlutprojektUtökning
 
         public void CheckAnswerController(Button button)
         {
-            
 
             if (button.Tag.ToString() == "1")
             {
@@ -36,10 +35,6 @@ namespace SlutprojektUtökning
             {
                 model.qNum++;
             }
-
-            
-
-            
         }
 
         public void RestartGame()
@@ -47,24 +42,17 @@ namespace SlutprojektUtökning
             model.score = 0;
             model.qNum = -1;
             model.constant = 0;
-            StartGame();
+            StartGameController();
         }
 
-        public void StartGame()
+        public void StartGameController()
         {
             var randomList = model.questionNumbers.OrderBy(a => Guid.NewGuid()).ToList();
 
             model.questionNumbers = randomList;
-
-            ResetQOrder();
-
-            for (int i = 0; i < model.questionNumbers.Count; i++)
-            {
-                QOrderView();
-            }
         }
 
-        public void NextQuestion()
+        public void NextQuestionController()
         {
             if (model.qNum < model.questionNumbers.Count)
             {
@@ -75,8 +63,9 @@ namespace SlutprojektUtökning
                 RestartGame();
             }
 
-            UpdateButton();
+            
 
+            /*
             switch (model.constant)
             {
                 case 1:
@@ -219,6 +208,7 @@ namespace SlutprojektUtökning
 
                     break;
             }
+            */
         }
     }
 }

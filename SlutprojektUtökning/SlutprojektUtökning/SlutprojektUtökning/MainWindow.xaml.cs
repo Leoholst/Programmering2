@@ -21,7 +21,7 @@ namespace SlutprojektUtökning
     public partial class MainWindow : Window
     {
         Model model = new Model();
-        public Controller controller;
+        public Controller controller = new Controller();
         
 
         public MainWindow()
@@ -30,9 +30,8 @@ namespace SlutprojektUtökning
             
             // controller = Controller.InitMainController();
             
-            controller.StartGame();
-            controller.NextQuestion();
-            Close();
+            controller.StartGameController();
+            controller.NextQuestionController();
         }
 
         public void ScoreTextOutput()
@@ -67,7 +66,26 @@ namespace SlutprojektUtökning
 
             ScoreTextOutput();
 
-            controller.NextQuestion();
+            controller.NextQuestionController();
+        }
+
+        public void StartGame()
+        {
+            controller.StartGameController();
+
+            ResetQOrder();
+
+            for (int i = 0; i < model.questionNumbers.Count; i++)
+            {
+                QOrderView();
+            }
+        }
+
+        public void NextQuestion()
+        {
+            controller.NextQuestionController();
+
+            UpdateButton();
         }
 
         public void SetQuestionData(Question2 question)
