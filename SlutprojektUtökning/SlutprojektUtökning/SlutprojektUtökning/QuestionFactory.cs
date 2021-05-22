@@ -13,20 +13,22 @@ namespace SlutprojektUtökning
         }
     }
 
-    class QuestionFactory : IQuestionFactory
+    class QuestionFactory
     {
         public string CreateQuestion()
         {
-
+            
+            
             return " ";
         }
     }
 
-    class Questions : QuestionFactory
+    class Questions
     {
-        public void IQuestion()
+        public void IQuestion(Questions question)
         {
-
+            
+            
         }
     }
 
