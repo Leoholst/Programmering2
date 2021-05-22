@@ -21,7 +21,7 @@ namespace SlutprojektUtökning
     public partial class MainWindow : Window
     {
         Model model = new Model();
-        public Controller controller = new Controller();
+        public Controller controller;
         
 
         public MainWindow()
@@ -64,16 +64,20 @@ namespace SlutprojektUtökning
             Button senderButton = sender as Button;
 
             controller.CheckAnswerController(senderButton);
+
+            ScoreTextOutput();
+
+            controller.NextQuestion();
         }
 
-        public void SetQuestionData(Question question)
+        public void SetQuestionData(Question2 question)
         {
-            Question questiona = new Question();
-            ans1.Content = questiona.Content;
+            Question2 questionA = new Question2();
+            ans1.Content = questionA.Content;
         }
     }
 
-    public class Question
+    public class Question2
     {
         public string Content { get; set; }
     }

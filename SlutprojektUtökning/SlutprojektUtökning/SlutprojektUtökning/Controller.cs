@@ -37,9 +37,9 @@ namespace SlutprojektUtökning
                 model.qNum++;
             }
 
-            view.ScoreTextOutput();
+            
 
-            NextQuestion();
+            
         }
 
         public void RestartGame()
@@ -56,11 +56,11 @@ namespace SlutprojektUtökning
 
             model.questionNumbers = randomList;
 
-            view.ResetQOrder();
+            ResetQOrder();
 
             for (int i = 0; i < model.questionNumbers.Count; i++)
             {
-                view.QOrderView();
+                QOrderView();
             }
         }
 
@@ -75,147 +75,147 @@ namespace SlutprojektUtökning
                 RestartGame();
             }
 
-            MainWindow.UpdateButton();
+            UpdateButton();
 
             switch (model.constant)
             {
                 case 1:
                     txtQuestion.Text = "Question 1";
 
-                    view.ans1.Content = "Answer 1";
-                    view.ans2.Content = "Answer 2 Correct";
-                    view.ans3.Content = "Answer 3";
-                    view.ans4.Content = "Answer 4";
+                    ans1.Content = "Answer 1";
+                    ans2.Content = "Answer 2 Correct";
+                    ans3.Content = "Answer 3";
+                    ans4.Content = "Answer 4";
 
-                    view.ans2.Tag = "1";
+                    ans2.Tag = "1";
 
-                    view.qImage.Source = new BitmapImage(new Uri("./images/1.jpg", UriKind.Relative));
+                    qImage.Source = new BitmapImage(new Uri("./images/1.jpg", UriKind.Relative));
 
                     break;
 
                 case 2:
-                    view.txtQuestion.Text = "Question 2";
+                    txtQuestion.Text = "Question 2";
 
-                    view.ans1.Content = "Answer 1 Correct";
-                    view.ans2.Content = "Answer 2";
-                    view.ans3.Content = "Answer 3";
-                    view.ans4.Content = "Answer 4";
+                    ans1.Content = "Answer 1 Correct";
+                    ans2.Content = "Answer 2";
+                    ans3.Content = "Answer 3";
+                    ans4.Content = "Answer 4";
 
-                    view.ans1.Tag = "1";
+                    ans1.Tag = "1";
 
-                    view.qImage.Source = new BitmapImage(new Uri("./images/2.jpg", UriKind.Relative));
+                    qImage.Source = new BitmapImage(new Uri("./images/2.jpg", UriKind.Relative));
 
                     break;
 
                 case 3:
-                    view.txtQuestion.Text = "Question 3";
+                    txtQuestion.Text = "Question 3";
 
-                    view.ans1.Content = "Answer 1";
-                    view.ans2.Content = "Answer 2";
-                    view.ans3.Content = "Answer 3 Correct";
-                    view.ans4.Content = "Answer 4";
+                    ans1.Content = "Answer 1";
+                    ans2.Content = "Answer 2";
+                    ans3.Content = "Answer 3 Correct";
+                    ans4.Content = "Answer 4";
 
-                    view.ans3.Tag = "1";
+                    ans3.Tag = "1";
 
-                    view.qImage.Source = new BitmapImage(new Uri("./images/3.jpg", UriKind.Relative));
+                    qImage.Source = new BitmapImage(new Uri("./images/3.jpg", UriKind.Relative));
 
                     break;
 
                 case 4:
-                    view.txtQuestion.Text = "Question 4";
+                    txtQuestion.Text = "Question 4";
 
-                    view.ans1.Content = "Answer 1";
-                    view.ans2.Content = "Answer 2";
-                    view.ans3.Content = "Answer 3";
-                    view.ans4.Content = "Answer 4 Correct";
+                    ans1.Content = "Answer 1";
+                    ans2.Content = "Answer 2";
+                    ans3.Content = "Answer 3";
+                    ans4.Content = "Answer 4 Correct";
 
-                    view.ans4.Tag = "1";
+                    ans4.Tag = "1";
 
-                    view.qImage.Source = new BitmapImage(new Uri("./images/4.jpg", UriKind.Relative));
+                    qImage.Source = new BitmapImage(new Uri("./images/4.jpg", UriKind.Relative));
 
                     break;
 
                 case 5:
-                    view.txtQuestion.Text = "Question 5";
+                    txtQuestion.Text = "Question 5";
 
-                    view.ans1.Content = "Answer 1 Correct";
-                    view.ans2.Content = "Answer 2";
-                    view.ans3.Content = "Answer 3";
-                    view.ans4.Content = "Answer 4";
+                    ans1.Content = "Answer 1 Correct";
+                    ans2.Content = "Answer 2";
+                    ans3.Content = "Answer 3";
+                    ans4.Content = "Answer 4";
 
-                    view.ans1.Tag = "1";
+                    ans1.Tag = "1";
 
-                    view.qImage.Source = new BitmapImage(new Uri("./images/5.jpg", UriKind.Relative));
+                    qImage.Source = new BitmapImage(new Uri("./images/5.jpg", UriKind.Relative));
 
                     break;
 
                 case 6:
-                    view.txtQuestion.Text = "Question 6";
+                    txtQuestion.Text = "Question 6";
 
-                    view.ans1.Content = "Answer 1";
-                    view.ans2.Content = "Answer 2 Correct";
-                    view.ans3.Content = "Answer 3";
-                    view.ans4.Content = "Answer 4";
+                    ans1.Content = "Answer 1";
+                    ans2.Content = "Answer 2 Correct";
+                    ans3.Content = "Answer 3";
+                    ans4.Content = "Answer 4";
 
-                    view.ans2.Tag = "1";
+                    ans2.Tag = "1";
 
-                    view.qImage.Source = new BitmapImage(new Uri("./images/6.jpg", UriKind.Relative));
+                    qImage.Source = new BitmapImage(new Uri("./images/6.jpg", UriKind.Relative));
 
                     break;
 
                 case 7:
-                    view.txtQuestion.Text = "Question 7";
+                    txtQuestion.Text = "Question 7";
 
-                    view.ans1.Content = "Answer 1";
-                    view.ans2.Content = "Answer 2";
-                    view.ans3.Content = "Answer 3 Correct";
-                    view.ans4.Content = "Answer 4";
+                    ans1.Content = "Answer 1";
+                    ans2.Content = "Answer 2";
+                    ans3.Content = "Answer 3 Correct";
+                    ans4.Content = "Answer 4";
 
-                    view.ans3.Tag = "1";
+                    ans3.Tag = "1";
 
-                    view.qImage.Source = new BitmapImage(new Uri("./images/7.jpg", UriKind.Relative));
+                    qImage.Source = new BitmapImage(new Uri("./images/7.jpg", UriKind.Relative));
 
                     break;
 
                 case 8:
-                    view.txtQuestion.Text = "Question 8";
+                    txtQuestion.Text = "Question 8";
 
-                    view.ans1.Content = "Answer 1";
-                    view.ans2.Content = "Answer 2";
-                    view.ans3.Content = "Answer 3";
-                    view.ans4.Content = "Answer 4 Correct";
+                    ans1.Content = "Answer 1";
+                    ans2.Content = "Answer 2";
+                    ans3.Content = "Answer 3";
+                    ans4.Content = "Answer 4 Correct";
 
-                    view.ans4.Tag = "1";
+                    ans4.Tag = "1";
 
-                    view.qImage.Source = new BitmapImage(new Uri("./images/8.jpg", UriKind.Relative));
+                    qImage.Source = new BitmapImage(new Uri("./images/8.jpg", UriKind.Relative));
 
                     break;
 
                 case 9:
-                    view.txtQuestion.Text = "Question 9";
+                    txtQuestion.Text = "Question 9";
 
-                    view.ans1.Content = "Answer 1 Correct";
-                    view.ans2.Content = "Answer 2";
-                    view.ans3.Content = "Answer 3";
-                    view.ans4.Content = "Answer 4";
+                    ans1.Content = "Answer 1 Correct";
+                    ans2.Content = "Answer 2";
+                    ans3.Content = "Answer 3";
+                    ans4.Content = "Answer 4";
 
-                    view.ans1.Tag = "1";
+                    ans1.Tag = "1";
 
-                    view.qImage.Source = new BitmapImage(new Uri("./images/9.jpg", UriKind.Relative));
+                    qImage.Source = new BitmapImage(new Uri("./images/9.jpg", UriKind.Relative));
 
                     break;
 
                 case 10:
-                    view.txtQuestion.Text = "Question 10";
+                    txtQuestion.Text = "Question 10";
 
-                    view.ans1.Content = "Answer 1";
-                    view.ans2.Content = "Answer 2";
-                    view.ans3.Content = "Answer 3";
-                    view.ans4.Content = "Answer 4 Correct";
+                    ans1.Content = "Answer 1";
+                    ans2.Content = "Answer 2";
+                    ans3.Content = "Answer 3";
+                    ans4.Content = "Answer 4 Correct";
 
-                    view.ans4.Tag = "1";
+                    ans4.Tag = "1";
 
-                    view.qImage.Source = new BitmapImage(new Uri("./images/10.jpg", UriKind.Relative));
+                    qImage.Source = new BitmapImage(new Uri("./images/10.jpg", UriKind.Relative));
 
                     break;
             }
